@@ -42,13 +42,13 @@ A aplicação utiliza integração com Supabase para consultar os dados cadastra
 ## Prévia do projeto
 
 ### Catálogo público
-![Página inicial do catálogo](screenshots/catalogo.png)
+![Página inicial do catálogo](catalogo.PNG)
 
 ### Produtos
-![Exibição dos produtos](screenshots/produtos.png)
+![Exibição dos produtos](produtos.PNG)
 
 ### Detalhes do produto
-![Detalhes do produto](screenshots/detalhes-produto.png)
+![Detalhes do produto](detalhes-produto.PNG)
 
 ## Acesso à aplicação
 
