@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#031735">
+  <meta name="description" content="Conheça os produtos da ABL IMPORTS. Confira nossos produtos, preços e entre em contato para fazer seu pedido.">
+
+  <title>ABL IMPORTS | Catálogo de Produtos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Young+Serif&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="loja.css?v=20261031-1">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a class="brand" href="index.html" aria-label="ABL IMPORTS - Página inicial">
+        <img class="brand-logo" src="ablimports.jpg" alt="Logo da ABL IMPORTS" width="48" height="48">
+        <span class="brand-text">
+          <strong>ABL IMPORTS</strong>
+          <small>PERFUMARIA E COSMÉTICOS</small>
+        </span>
+      </a>
+
+      <a class="header-contact" id="headerWhatsApp" href="#contato">
+        <span aria-hidden="true" class="contact-icon">↗</span>
+        <span>Fale conosco</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">BEM-VINDO À ABL IMPORTS</span>
+
+        <h1>
+          Fragâncias que
+          <span>combinam com você.</span>
+        </h1>
+
+        <p>
+          Explore nosso catálogo e encontre a fragância perfeita para o seu dia a dia.
+        </p>
+
+        <a class="hero-button" href="#catalogo">
+          Explorar produtos <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+      <div class="hero-decoration" aria-hidden="true">
+        <span class="decoration-circle circle-one"></span>
+        <span class="decoration-circle circle-two"></span>
+
+        <div class="decoration-card">
+          <span class="decoration-line"></span>
+          <span class="decoration-line short"></span>
+          <span class="decoration-dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo" aria-labelledby="catalogTitle">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">NOSSA VITRINE</span>
+          <h2 id="catalogTitle">Encontre sua próxima fragância</h2>
+          <p class="section-description">
+            Confira os produtos disponíveis no nosso catálogo.
+          </p>
+        </div>
+
+        <span class="product-count" id="productCount" aria-live="polite">
+          Carregando produtos...
+        </span>
+      </div>
+
+      <div class="catalog-toolbar">
+        <label class="search-box" for="productSearch">
+          <span aria-hidden="true" class="search-icon">⌕</span>
+
+          <input
+            type="search"
+            id="productSearch"
+            placeholder="Buscar produtos..."
+            autocomplete="off"
+            aria-label="Buscar produtos por nome, categoria ou descrição"
+          >
+
+          <kbd>/</kbd>
+        </label>
+
+        <label class="sort-box" for="productSort">
+          <span>Ordenar:</span>
+
+          <select id="productSort">
+            <option value="novos">Mais recentes</option>
+            <option value="nome">Nome (A–Z)</option>
+            <option value="menor">Menor preço</option>
+            <option value="maior">Maior preço</option>
+          </select>
+        </label>
+      </div>
+
+      <nav
+        class="category-filters"
+        id="categoryFilters"
+        aria-label="Filtrar produtos por categoria"
+      >
+        <button
+          type="button"
+          class="category-chip active"
+          data-category=""
+          aria-pressed="true"
+        >
+          Todos os produtos
+        </button>
+      </nav>
+
+      <div class="catalog-message" id="catalogMessage" role="status" aria-live="polite">
+        <span class="loading-indicator" aria-hidden="true"></span>
+        <p>Carregando nosso catálogo...</p>
+      </div>
+
+      <div class="product-grid" id="productGrid" aria-label="Produtos da ABL IMPORTS"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <span class="empty-icon" aria-hidden="true">⌕</span>
+        <h3>Nenhum produto encontrado</h3>
+        <p>
+          Tente pesquisar por outro nome ou selecionar
+          uma categoria diferente.
+        </p>
+
+        <button type="button" id="clearFilters" class="secondary-button">
+          Limpar filtros
+        </button>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato" aria-labelledby="contactTitle">
+      <div class="contact-content">
+        <span class="eyebrow">PRECISA DE AJUDA?</span>
+
+        <h2 id="contactTitle">Vamos encontrar o que você procura.</h2>
+
+        <p>
+          Ficou com alguma dúvida sobre um produto?
+          Entre em contato com a nossa equipe.
+        </p>
+
+        <a
+          class="whatsapp-button"
+          id="contactWhatsApp"
+          href="#catalogo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span aria-hidden="true">↗</span>
+          Conversar pelo WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="product-modal" id="productModal" hidden>
+    <div class="product-modal-backdrop" id="modalBackdrop"></div>
+
+    <div
+      class="product-modal-dialog"
+      id="modalDialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalNome"
+      tabindex="-1"
+    >
+      <button
+        type="button"
+        class="modal-close"
+        id="modalClose"
+        aria-label="Fechar detalhes do produto"
+      >
+        ×
+      </button>
+
+      <div class="modal-gallery">
+        <div class="modal-thumbs" id="modalThumbs"></div>
+        <div class="modal-main-image" id="modalMainImage"></div>
+      </div>
+
+      <div class="modal-info">
+        <span class="product-category" id="modalCategoria" hidden></span>
+        <h2 class="modal-title" id="modalNome"></h2>
+        <div class="modal-price" id="modalPreco"></div>
+
+        <!-- Opções de tamanho (ml), preenchidas pelo loja.js -->
+        <div class="modal-variants" id="modalVariacoes" hidden></div>
+
+        <a
+          class="modal-whatsapp"
+          id="modalWhatsApp"
+          href="#contato"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span aria-hidden="true">↗</span>
+          Tenho interesse
+        </a>
+
+        <div class="modal-description-block">
+          <h3>Descrição</h3>
+          <p id="modalDescricao"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <a class="footer-brand" href="index.html">ABL IMPORTS<span>.</span></a>
+      <p>Sua próxima essência se encontra aqui.</p>
+      <small>
+        © <span id="currentYear"></span> Cabravier.
+        Todos os direitos reservados.
+      </small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js?v=20261031-1"></script>
+  <script src="loja.js?v=20261031-1"></script>
+</body>
+</html>
