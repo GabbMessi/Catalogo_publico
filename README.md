@@ -53,7 +53,7 @@ A aplicação utiliza integração com Supabase para consultar os dados cadastra
 ## Acesso à aplicação
 
 O catálogo possui uma versão publicada na web, permitindo que os clientes consultem os produtos disponíveis e entrem em contato diretamente com a empresa.
-[**Acessar catálogo público**] (https://catalogo.cabravier.workers.dev)
+[**Acessar catálogo público**](https://catalogo.gabrielcabravier.workers.dev)
 
 **ABL IMPORTS — Catálogo de Produtos**
 
