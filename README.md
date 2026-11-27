@@ -37,7 +37,7 @@ A aplicação utiliza integração com Supabase para consultar os dados cadastra
 | `index.html` | Estrutura principal da aplicação. |
 | `loja.css` | Estilos e layout da interface. |
 | `loja.js` | Lógica e funcionalidades do catálogo. |
-| `supabase-config.js` | Configurações de conexão com o Supabas. |
+| `supabase-config.js` | Configurações de conexão com o Supabase. |
 
 ## Prévia do projeto
 
